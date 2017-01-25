@@ -148,10 +148,14 @@ each(names, function(item, indice){
 
 
 
-function getUserById(arr, cb) {
-  var user = arr[2];
-  cb(user);
+function getUserById(coll, string, cb) {
+  for(var i = 0; i < coll.length; i++) {
+    if(coll[i].id === string) {
+      cb(coll[i]);
+    }
+  }
 }
+
 
  //code here for getUserById
 
