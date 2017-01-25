@@ -130,8 +130,13 @@ uniq(names, function(uniqArr){
 
 
 
+function each(arr, cb) {
+   for (var i = 0; i < arr.length; i++) {
+    var item = arr[i];
+    cb(item, i);
+   }
+ }
 
-    
 
 each(names, function(item, indice){
   console.log('The item in the ' + indice + ' position is ' + item)
